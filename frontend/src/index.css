@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-rescue-red: #ef4444;
+}
+
+/* Optional: Default styling */
+:root {
+  background-color: #f3f4f6;
+}

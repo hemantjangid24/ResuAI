@@ -1,0 +1,65 @@
+# 🚨 ResuAI-Pulse | Next-Gen Emergency Response Dashboard
+> **AI-Powered Emergency Dispatch System with Real-time Geospatial Intelligence.**
+
+[![Live Demo](https://img.shields.io/badge/Live-Demo-red?style=for-the-badge&logo=vercel)](https://resuai-pulse.vercel.app)
+[![Backend Status](https://img.shields.io/badge/Backend-Online-emerald?style=for-the-badge&logo=fastapi)](https://resuai-backend-api.vercel.app/)
+
+## 🌟 The Problem
+During emergencies, every second counts. Traditional systems often suffer from manual dispatch delays, lack of real-time victim location tracking, and poor coordination between different departments (Police, Medical, Fire). **ResuAI-Pulse** solves this by automating the entire pipeline from incident reporting to responder dispatch.
+
+## 🚀 Key Features
+- **🤖 AI Intent Classification:** Uses an NLP engine (Logistic Regression) to classify emergency types (Fire, Medical, Accident, Crime) from raw text or voice inputs.
+- **📍 Real-time Geospatial Routing:** Automatically fetches the **top 3 nearest hospitals/police stations** using the **Overpass API (OpenStreetMap)**.
+- **🛣️ Dynamic Navigation:** Visualizes the shortest path between the victim and the first responder using dashed-polyline routing.
+- **📞 Omni-Channel Alerts:** - **Voice Call:** Triggers automated IVR calls to dispatchers via **Twilio Voice API**.
+  - **Email:** Sends instant high-priority email alerts via **SMTP**.
+- **📱 Responsive Command Center:** A "Mobile-First" dashboard that works perfectly on Desktop (Sidebar view) and Mobile (Floating Chat Widget).
+- **🚨 Priority Monitoring:** Visual "Pulse" effect and audio alerts for high-severity (9+) incidents.
+
+## 🛠️ Tech Stack
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | React.js, Tailwind CSS, Leaflet.js, Lucide Icons |
+| **Backend** | FastAPI (Python), Uvicorn |
+| **AI/ML** | Scikit-learn (NLP), Pydantic |
+| **APIs** | Twilio (Voice), Overpass API (Maps), SMTP (Email) |
+| **Deployment** | Vercel (Serverless Functions) |
+
+## 🏗️ System Architecture
+1. **User Input:** Victim reports an incident via text or quick-action buttons.
+2. **AI Processing:** FastAPI backend analyzes the threat level and severity.
+3. **Spatial Query:** System fetches the 3 closest emergency nodes based on live GPS coordinates.
+4. **Automated Dispatch:** Parallel triggers for Twilio Voice Calls and Email Notifications.
+5. **Dashboard Update:** Real-time log update and Map routing for the Command Center.
+
+## 📸 Screenshots
+*(Add your project screenshots here - One for Desktop View and one for Mobile View)*
+
+## 🚦 Getting Started
+1. **Clone the repo:**
+   ```bash
+   git clone [https://github.com/yourusername/ResuAI-Pulse.git](https://github.com/yourusername/ResuAI-Pulse.git)
+
+
+
+   Install Dependencies:
+
+Frontend: npm install
+
+Backend: pip install -r requirements.txt
+
+Environment Variables: Create a .env file for:
+
+TWILIO_SID, TWILIO_TOKEN, SENDER_EMAIL, APP_PASSWORD.
+
+### 🛠️ Git Error Fix (Quick Guide)
+Bhai, terminal mein jo `git : The term 'git' is not recognized` aa raha hai, uska matlab hai ki aapne **Git install nahi kiya hai**.
+
+1. **Download:** [git-scm.com](https://git-scm.com/download/win) par jao aur 64-bit installer download karo.
+2. **Install:** Bas "Next" click karte jao.
+3. **Restart VS Code:** Ye **ZAROORI** hai. VS Code band karke fir se kholo.
+4. **Verification:** Terminal mein `git --version` likho. Agar version aa gaya, toh upar wali commands (init, add, commit) fir se chalao.
+
+**Hemant bhai, ek baar ye README GitHub par upload ho jaye, toh batana. Kal hum EcoSort AI ko bhi isi tarah "Pro" banayenge! 🚀🔥**
+
+Kya main aapke liye **EcoSort AI** ke Heatmap ke liye backend logic ready karoon?
